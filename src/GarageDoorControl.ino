@@ -1,18 +1,22 @@
-/*
- * Project GarageDoorControl
- * Description:
- * Author:
- * Date:
- */
+int controlPin = D6 ;
 
-// setup() runs once, when the device is first turned on.
 void setup() {
-  // Put initialization like pinMode and begin functions here.
+  pinMode(controlPin, OUTPUT);
+  digitalWrite(controlPin, HIGH);
 
+  Particle.function("flashRelay", flashRelayCloud) ;
 }
 
-// loop() runs over and over again, as quickly as it can execute.
-void loop() {
-  // The core of your code will likely live here.
+int flashRelayCloud( String inString ) {
+  flashRelay( inString.toInt() ) ;
+  return 0 ;
+}
 
+void flashRelay( int duration ) {
+  digitalWrite(controlPin, LOW);
+  delay(duration);
+  digitalWrite(controlPin, HIGH);
+}
+
+void loop() {
 }
