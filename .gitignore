@@ -3,3 +3,5 @@ GarageDoorControl/.vscode/settings.json
 .vscode/launch.json
 .vscode/settings.json
 GarageDoorControl.code-workspace
+target/
+src/GarageDoorControl.cpp
