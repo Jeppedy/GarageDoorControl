@@ -4,4 +4,6 @@ GarageDoorControl/.vscode/settings.json
 .vscode/settings.json
 GarageDoorControl.code-workspace
 target/
+lib/
 src/GarageDoorControl.cpp
+GarageDoorControl2.code-workspace
